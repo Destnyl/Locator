@@ -13,6 +13,7 @@
           <input
             type="text"
             placeholder="Location"
+            value="TORRENCE CA 90503"
           >
           <input
             type="button"
@@ -25,10 +26,10 @@
             name=""
             id=""
           >
-            <option value="0">Select car:</option>
-            <option value="1">Audi</option>
-            <option value="2">BMW</option>
-            <option value="3">Citroen</option>
+            <option value="0">United State of America</option>
+            <option value="1">New Zelanc</option>
+            <option value="2">Canada</option>
+            <option value="3">Germany</option>
           </select>
 
           <button onclick="handleClickFilter()">
@@ -84,7 +85,7 @@
           <h5> There are 10 locations near you</h5>
 
           <div class="location-list" id="list">
-            <div class="card">
+            <div class="card" id="list-item">
               <div class="col">
                 <img
                 src="./images/map_pin_regular.png"
@@ -131,7 +132,7 @@
     
               <div class="col-1">
                 <h4>The Shop</h4>
-                <h6 class="address">3433 Sepulveda blvd torrance, ca 90505</h6>
+                <h6 class="address">3433 Kingsdale torrance, ca 90505</h6>
                 <h6>
                   <span>
                     <img
@@ -167,7 +168,7 @@
     
               <div class="col-1">
                 <h4>The Shop</h4>
-                <h6 class="address">3433 Sepulveda blvd torrance, ca 90505</h6>
+                <h6 class="address">3433 Western ave torrance, ca 90505</h6>
                 <h6>
                   <span>
                     <img
@@ -463,7 +464,9 @@
 var filterElement = document.getElementById("filter-option");
 var locationListElement = document.getElementById("location-list");
 var mapElement = document.getElementById("map");
-var listElement = document.getElementById("list");
+var list = document.getElementById("list");
+var listItem = document.getElementById("list-item");
+
 
   function handleClickFilter() {
     if (filterElement.style.display === "none") {
@@ -478,10 +481,11 @@ var listElement = document.getElementById("list");
   function clickedTab() {
     if (mapElement.style.display === "none") {
       mapElement.style.display = "block";
-      listElement.style.display = "none";
+      locationListElement.style.display = "none";
     } else {
       mapElement.style.display = "none";
-      listElement.style.display = "block";
+      locationListElement.style.display = "block";
     }
   }
+
 </script>
