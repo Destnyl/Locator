@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="location">
+
+        <div class="search">
+          <input
+            type="text"
+            placeholder="Location"
+          >
+          <input
+            type="button"
+            value="SEARCH"
+          >
+        </div>
+
+        <div class="filter">
+          <select 
+            name=""
+            id=""
+          >
+            <option value="0">Select car:</option>
+            <option value="1">Audi</option>
+            <option value="2">BMW</option>
+            <option value="3">Citroen</option>
+          </select>
+
+          <button onclick="handleClickFilter()">
+            <i class="fa fa-filter"></i>
+          </button>
+        </div>
+
+        <!-- Filter Options -->
+        <div id="filter-option">
+          <h5>Filters</h5>
+
+          <a href="#">
+            <span>
+              <i class="fa fa-shopping-bag"></i>
+            </span> 
+            Retail
+          </a>
+          <a href="#">
+            <span>
+              <i class="fa fa-building"></i>
+            </span> 
+            Outlet
+          </a>
+          <a href="#">
+            <span>
+              <i class="fa fa-industry"></i>
+            </span> 
+            Factory
+          </a>
+          <a href="#">
+            <span>
+              <i class="fa fa-bullhorn"></i>
+            </span> 
+            Promotion
+          </a>
+
+
+          <button onclick="handleClickFilter()">
+           Close filter
+          </button>
+
+        </div>
+
+        <!-- tab -->
+        <div id="tabs">
+          <ul>
+            <li><a href="#" onclick="clickedTab()">List View</a></li>
+            <li><a href="#" onclick="clickedTab()">Map View</a></li>
+          </ul>
+        </div>
+
+        <div id="location-list">
+          <h5> There are 10 locations near you</h5>
+
+          <div class="location-list" id="list">
+            <div class="card">
+              <div class="col">
+                <img
+                src="./images/map_pin_regular.png"
+                alt="pin"
+                >
+                <h6>Open until 10 am</h6>
+              </div>
+    
+              <div class="col-1">
+                <h4>The Shop</h4>
+                <h6 class="address">3433 Sepulveda blvd torrance, ca 90505</h6>
+                <h6>
+                  <span>
+                    <img
+                    src="./images/phone_icon.png"
+                    alt="phone_icon"
+                    >
+                  </span>
+                  (214) 826-0331
+                </h6>
+    
+                <input
+                type="button"
+                value="get directions"
+                >
+              </div>
+    
+              <div class="col-2">
+                <img
+                src="./images/chevron_right.png"
+                alt="chevron_right"
+                >
+              </div>
+            </div>
+    
+            <div class="card">
+              <div class="col">
+                <img
+                src="./images/map_pin_regular.png"
+                alt="pin"
+                >
+                <h6>Open until 10 am</h6>
+              </div>
+    
+              <div class="col-1">
+                <h4>The Shop</h4>
+                <h6 class="address">3433 Sepulveda blvd torrance, ca 90505</h6>
+                <h6>
+                  <span>
+                    <img
+                    src="./images/phone_icon.png"
+                    alt="phone_icon"
+                    >
+                  </span>
+                  (214) 826-0331
+                </h6>
+    
+                <input
+                type="button"
+                value="get directions"
+                >
+              </div>
+    
+              <div class="col-2">
+                <img
+                src="./images/chevron_right.png"
+                alt="chevron_right"
+                >
+              </div>
+            </div>
+    
+            <div class="card">
+              <div class="col">
+                <img
+                src="./images/map_pin_regular.png"
+                alt="pin"
+                >
+                <h6>Open until 10 am</h6>
+              </div>
+    
+              <div class="col-1">
+                <h4>The Shop</h4>
+                <h6 class="address">3433 Sepulveda blvd torrance, ca 90505</h6>
+                <h6>
+                  <span>
+                    <img
+                    src="./images/phone_icon.png"
+                    alt="phone_icon"
+                    >
+                  </span>
+                  (214) 826-0331
+                </h6>
+    
+                <input
+                type="button"
+                value="get directions"
+                >
+              </div>
+    
+              <div class="col-2">
+                <img
+                src="./images/chevron_right.png"
+                alt="chevron_right"
+                >
+              </div>
+            </div>
+    
+            <div class="card">
+              <div class="col">
+                <img
+                src="./images/map_pin_regular.png"
+                alt="pin"
+                >
+                <h6>Open until 10 am</h6>
+              </div>
+    
+              <div class="col-1">
+                <h4>The Shop</h4>
+                <h6 class="address">3433 Sepulveda blvd torrance, ca 90505</h6>
+                <h6>
+                  <span>
+                    <img
+                    src="./images/phone_icon.png"
+                    alt="phone_icon"
+                    >
+                  </span>
+                  (214) 826-0331
+                </h6>
+    
+                <input
+                type="button"
+                value="get directions"
+                >
+              </div>
+    
+              <div class="col-2">
+                <img
+                src="./images/chevron_right.png"
+                alt="chevron_right"
+                >
+              </div>
+            </div>
+    
+            <div class="card">
+              <div class="col">
+                <img
+                src="./images/map_pin_regular.png"
+                alt="pin"
+                >
+                <h6>Open until 10 am</h6>
+              </div>
+    
+              <div class="col-1">
+                <h4>The Shop</h4>
+                <h6 class="address">3433 Sepulveda blvd torrance, ca 90505</h6>
+                <h6>
+                  <span>
+                    <img
+                    src="./images/phone_icon.png"
+                    alt="phone_icon"
+                    >
+                  </span>
+                  (214) 826-0331
+                </h6>
+    
+                <input
+                type="button"
+                value="get directions"
+                >
+              </div>
+    
+              <div class="col-2">
+                <img
+                src="./images/chevron_right.png"
+                alt="chevron_right"
+                >
+              </div>
+            </div>
+    
+            <div class="card">
+              <div class="col">
+                <img
+                src="./images/map_pin_regular.png"
+                alt="pin"
+                >
+                <h6>Open until 10 am</h6>
+              </div>
+    
+              <div class="col-1">
+                <h4>The Shop</h4>
+                <h6 class="address">3433 Sepulveda blvd torrance, ca 90505</h6>
+                <h6>
+                  <span>
+                    <img
+                    src="./images/phone_icon.png"
+                    alt="phone_icon"
+                    >
+                  </span>
+                  (214) 826-0331
+                </h6>
+    
+                <input
+                type="button"
+                value="get directions"
+                >
+              </div>
+    
+              <div class="col-2">
+                <img
+                src="./images/chevron_right.png"
+                alt="chevron_right"
+                >
+              </div>
+            </div>
+    
+            <div class="card">
+              <div class="col">
+                <img
+                src="./images/map_pin_regular.png"
+                alt="pin"
+                >
+                <h6>Open until 10 am</h6>
+              </div>
+    
+              <div class="col-1">
+                <h4>The Shop</h4>
+                <h6 class="address">3433 Sepulveda blvd torrance, ca 90505</h6>
+                <h6>
+                  <span>
+                    <img
+                    src="./images/phone_icon.png"
+                    alt="phone_icon"
+                    >
+                  </span>
+                  (214) 826-0331
+                </h6>
+    
+                <input
+                type="button"
+                value="get directions"
+                >
+              </div>
+    
+              <div class="col-2">
+                <img
+                src="./images/chevron_right.png"
+                alt="chevron_right"
+                >
+              </div>
+            </div>
+    
+            <div class="card">
+              <div class="col">
+                <img
+                src="./images/map_pin_regular.png"
+                alt="pin"
+                >
+                <h6>Open until 10 am</h6>
+              </div>
+    
+              <div class="col-1">
+                <h4>The Shop</h4>
+                <h6 class="address">3433 Sepulveda blvd torrance, ca 90505</h6>
+                <h6>
+                  <span>
+                    <img
+                    src="./images/phone_icon.png"
+                    alt="phone_icon"
+                    >
+                  </span>
+                  (214) 826-0331
+                </h6>
+    
+                <input
+                type="button"
+                value="get directions"
+                >
+              </div>
+    
+              <div class="col-2">
+                <img
+                src="./images/chevron_right.png"
+                alt="chevron_right"
+                >
+              </div>
+            </div>
+    
+            <div class="card">
+              <div class="col">
+                <img
+                src="./images/map_pin_regular.png"
+                alt="pin"
+                >
+                <h6>Open until 10 am</h6>
+              </div>
+    
+              <div class="col-1">
+                <h4>The Shop</h4>
+                <h6 class="address">3433 Sepulveda blvd torrance, ca 90505</h6>
+                <h6>
+                  <span>
+                    <img
+                    src="./images/phone_icon.png"
+                    alt="phone_icon"
+                    >
+                  </span>
+                  (214) 826-0331
+                </h6>
+    
+                <input
+                type="button"
+                value="get directions"
+                >
+              </div>
+    
+              <div class="col-2">
+                <img
+                src="./images/chevron_right.png"
+                alt="chevron_right"
+                >
+              </div>
+            </div>
+    
+            <div class="card">
+              <div class="col">
+                <img
+                src="./images/map_pin_regular.png"
+                alt="pin"
+                >
+                <h6>Open until 10 am</h6>
+              </div>
+    
+              <div class="col-1">
+                <h4>The Shop</h4>
+                <h6 class="address">3433 Sepulveda blvd torrance, ca 90505</h6>
+                <h6>
+                  <span>
+                    <img
+                    src="./images/phone_icon.png"
+                    alt="phone_icon"
+                    >
+                  </span>
+                  (214) 826-0331
+                </h6>
+    
+                <input
+                type="button"
+                value="get directions"
+                >
+              </div>
+    
+              <div class="col-2">
+                <img
+                src="./images/chevron_right.png"
+                alt="chevron_right"
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main" id="map">
+        <img
+          class="map"
+          src="./images/map.png"
+          alt="map image"
+        >
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+
+var filterElement = document.getElementById("filter-option");
+var locationListElement = document.getElementById("location-list");
+var mapElement = document.getElementById("map");
+var listElement = document.getElementById("list");
+
+  function handleClickFilter() {
+    if (filterElement.style.display === "none") {
+      filterElement.style.display = "block";
+      locationListElement.style.display = "none";
+    } else {
+      filterElement.style.display = "none";
+      locationListElement.style.display = "block";
+    }
+  }
+
+  function clickedTab() {
+    if (mapElement.style.display === "none") {
+      mapElement.style.display = "block";
+      listElement.style.display = "none";
+    } else {
+      mapElement.style.display = "none";
+      listElement.style.display = "block";
+    }
+  }
+</script>
